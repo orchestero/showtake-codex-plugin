@@ -1,0 +1,56 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "showtake",
+  "version": "1.0.0",
+  "description": "Film demo videos and App Store screenshots of your iOS (Simulator) and Mac apps with ShowTake.",
+  "author": {
+    "name": "ShowTake",
+    "email": "team@showtake.app",
+    "url": "https://showtake.app"
+  },
+  "homepage": "https://showtake.app",
+  "repository": "https://github.com/orchestero/showtake-codex-plugin",
+  "license": "Proprietary",
+  "keywords": [
+    "video",
+    "demo",
+    "ios",
+    "macos",
+    "simulator",
+    "app-store",
+    "screenshots"
+  ],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "onboardingSkill": "./skills/setup-showtake/SKILL.md",
+      "interface": {
+        "displayName": "ShowTake",
+        "shortDescription": "Film iOS and Mac app demos",
+        "longDescription": "ShowTake lets your agent film polished demo videos of your own iOS (Simulator) and Mac apps. The agent plans the steps, drives the real app and retakes until the take is clean. ShowTake adds zooms on every tap and typed field, speeds up waits, writes captions, and exports App Store previews and screenshots at every accepted size plus 16:9, 1:1 and 9:16 social cuts. Saved flows replay for new builds and languages. Recording and rendering run on your Mac; nothing is uploaded. Requires the ShowTake Mac app (macOS 26 or later); the setup skill installs it, and this plugin connects its MCP server.",
+        "developerName": "ShowTake",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Record app demos",
+          "Export videos",
+          "Export screenshots"
+        ],
+        "websiteURL": "https://showtake.app",
+        "supportURL": "https://github.com/orchestero/showtake-issues/issues",
+        "privacyPolicyURL": "https://showtake.app/privacy",
+        "termsOfServiceURL": "https://showtake.app/terms",
+        "defaultPrompt": [
+          "Make a 20-second demo video of my iOS app's onboarding.",
+          "Export an App Store preview and screenshots of my app.",
+          "Film my Mac app adding and completing a task."
+        ],
+        "brandColor": "#5B5BD6",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "publication": {
+        "release_notes": "First release: setup skill (installs ShowTake and connects its tools) and a skill that films demo videos and exports App Store previews, screenshots and social cuts."
+      }
+    }
+  }
+}

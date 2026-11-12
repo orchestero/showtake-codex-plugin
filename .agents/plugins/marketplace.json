@@ -1,0 +1,20 @@
+{
+  "name": "showtake",
+  "interface": {
+    "displayName": "ShowTake"
+  },
+  "plugins": [
+    {
+      "name": "showtake",
+      "source": {
+        "source": "local",
+        "path": "./plugins/showtake"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
